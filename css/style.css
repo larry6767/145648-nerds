@@ -1,21 +1,21 @@
 body {
 	font-size: 16px;
-	line-height: 22px;
+	line-height: 1.375;
 	color: #283136;
 	font-weight: bold;
-	font-style: "Roboto", "Times New Roman";
+	font-family: "Roboto", "Times New Roman";
 }
 h2 {
 	font-size: 36px;
-	line-height: 36px;
+	line-height: 1;
 	color: #000000;
 	font-weight: bold;
-	font-style: "Roboto", "Times New Roman";
+	font-family: "Roboto", "Times New Roman";
 }
 h3 {
 	font-size: 18px;
-	line-height: 30px;
+	line-height: 1;
 	color: #000000;
 	font-weight: bold;
-	font-style: "Roboto", "Times New Roman";
+	font-family: "Roboto", "Times New Roman";
 }
