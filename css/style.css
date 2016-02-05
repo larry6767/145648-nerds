@@ -3,19 +3,178 @@ body {
 	line-height: 1.375;
 	color: #283136;
 	font-weight: bold;
-	font-family: "Roboto", "Times New Roman";
+	font-family: "Roboto", sans-serif, "Times New Roman";
 }
 h2 {
 	font-size: 36px;
 	line-height: 1;
 	color: #000000;
 	font-weight: bold;
-	font-family: "Roboto", "Times New Roman";
+	font-family: "Roboto", sans-serif, "Times New Roman";
 }
 h3 {
 	font-size: 18px;
 	line-height: 1;
 	color: #000000;
 	font-weight: bold;
-	font-family: "Roboto", "Times New Roman";
+	font-family: "Roboto", sans-serif, "Times New Roman";
+}
+
+/*Общие стили для страниц*/
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+.to-left {
+    float: left;
+}
+.to-right {
+    float: right;
+}
+.main-header {
+    margin-bottom: 80px;
+    background: #eeeeee;
+}
+.container {
+    width: 880px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.logo-navigation-wrapper {
+    margin-bottom: 45px;
+}
+.logo {
+    width: 140px;
+    padding-top: 25px;
+}
+.main-navigation {
+    width: 730px;
+    font-size: 0;
+}
+.main-navigation li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    padding-top: 60px;
+    padding-left: 40px;
+}
+.main-navigation a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+}
+.main-navigation li:first-child {
+    padding-left: 150px;
+}
+.main-navigation li:last-child {
+    padding-left: 85px;
+}
+.map-wrapper {
+    width: 1200px;
+    min-height: 416px;
+    position: relative;
+    margin: 0 auto;
+    background: url("/img/map.jpg") no-repeat;
+}
+.contact-block {
+    width: 250px;
+    position: absolute;
+    left: 160px;
+    top: 88px;
+    background: #ffffff;
+}
+.social-btn {
+    width: 240px;
+    margin-right: 80px;
+}
+.footer-welcome {
+    width: 550px;
+}
+.footer-welcome h2 {
+    margin-bottom: 0;   
+}
+
+/*Главная страница*/
+
+.slider {
+    width: 880px;
+}
+.slide-info {
+    width: 370px;
+}
+.image-wrapper {
+    width: 340px;
+}
+.slide-pages {
+    width: 80px;
+    margin: 0 auto;
+}
+.services {
+    width: 240px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+}
+.services:last-child {
+    margin-right: 0;
+}
+.services h3 {
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+.services p {
+    margin-bottom: 25px;
+    font-size: 15px;
+    color: #283136;
+}
+.services a {
+    display: block;
+    width: 140px;
+    height: 38px;
+    padding: auto;
+}
+.about-us-panel-top {
+    border-top: 2px solid #eeeeee;
+    padding-top: 80px;
+    margin-bottom: 10px;
+}
+.left-top-about-us-panel {
+    width: 620px;
+}
+.right-top-about-us-panel {
+    width: 240px;
+    padding-top: 18px;
+}
+.about-us-panel-bottom {
+    margin-bottom: 60px;
+}
+.left-bottom-about-us-panel {
+    width: 620px;
+}
+.right-bottom-about-us-panel {
+    width: 240px;
+}
+.left-top-about-us-panel h2 {
+    margin-bottom: 0px;
+}
+.project-panel {
+    border-top: 2px solid #eeeeee;
+    padding-top: 40px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 30px;
+    margin-bottom: 85px;
+    font-size: 0;
+}
+.project-link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-right: 117px;
+}
+.project-link:last-child {
+    margin-right: 0;
+}
+.project-link:first-child {
+    margin-left: 20px;
 }
