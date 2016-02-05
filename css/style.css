@@ -178,3 +178,94 @@ h3 {
 .project-link:first-child {
     margin-left: 20px;
 }
+
+/*Страница каталога*/
+
+.catalog {
+    margin-bottom: 80px;
+}
+.header-welcome {
+    width: 700px;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.catalog-filter-panel {
+    width: 240px;
+}
+.catalog-filter-panel h3 {
+    margin-top: 0;
+}
+.catalog-panel {
+    width: 560px;
+}
+.sort-bar-list {
+    font-size: 0;
+}
+.sort-bar-list li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+    font-size: 16px;
+}
+.catalog-wrapper {
+    font-size: 0;
+}
+.layout-wrapper {
+    display: inline-block;
+    width: 240px;
+    vertical-align: top;
+    font-size: 16px;
+    margin-bottom: 80px;
+}
+.layout-wrapper:nth-child(2n-1) {
+    margin-right: 80px;
+}
+.window-bar {
+    width: 240px;
+    height: 30px;
+    background: #f1f1f1;
+}
+.layout {
+    position: relative;
+    width: 240px;
+    height: 240px;
+}
+.layout-first {
+    background: url("/img/aviator.jpg") no-repeat;
+}
+.layout-second {
+    background: url("/img/sunset.jpg") no-repeat;
+}
+.layout-third {
+    background: url("/img/forte.jpg") no-repeat;
+}
+.layout-fourth {
+    background: url("/img/modern-organic-thai.jpg") no-repeat;
+}
+.layout-fifth {
+    background: url("/img/avenue.jpg") no-repeat;
+}
+.layout-sixth {
+    background: url("/img/dovetail.jpg") no-repeat;
+}
+.buy-layout-bar {
+    position: absolute;
+    width: 200px;
+    min-height: 200px;
+    background: #ffffff;
+    top: 20px;
+    left: 20px;
+}
+.catalog-page-wrapper {
+    font-size: 0;
+}
+.catalog-page-wrapper li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+.catalog-page-list {
+    padding: 0;
+}
