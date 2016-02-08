@@ -135,7 +135,7 @@ h3 {
     display: inline-block;
     vertical-align: top;
     font-size: 14px;
-    padding: 10px 0;
+    margin: 10px 0;
 }
 .main-navigation a {
     display: block;
@@ -179,10 +179,10 @@ h3 {
     background-position: -7px -201px;
 }
 .main-navigation li:first-child {
-    padding-left: 165px;
+    margin-left: 165px;
 }
 .main-navigation li:last-child {
-    padding-left: 40px;
+    margin-left: 40px;
 }
 .map-wrapper {
     width: 1200px;
@@ -577,7 +577,7 @@ h3 {
     vertical-align: top;
     width: 18px;
     height: 18px;
-    margin-left: 85px;
+    margin-left: 75px;
     cursor: pointer;
 }
 .sort-bar-radio:last-child {
