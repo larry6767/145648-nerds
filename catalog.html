@@ -3,28 +3,34 @@
 	<head>
     	<meta charset="utf-8">
     	<title>HTML Academy: Нёрдс</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
     	<header class="main-header">
-    		<div class="conteiner">
-    			<nav class="main-navigation">
-    				<ul>
-    					<li><a href="index.html"><img src="img/logo.png" width="139" height="56" alt="Nerds"></a></li>
-    					<li><a href="#">Студия</a></li>
-    					<li><a href="#">Клиенты</a></li>
-    					<li><a href="#">Магазин</a></li>
-    					<li><a href="#">Контакты</a></li>
-    					<li><a href="#">Корзина</a></li>
-    				</ul>
-    			</nav>
+    		<div class="container">
+    			<div class="logo-navigation-wrapper clearfix">
+                    <div class="logo to-left">
+                        <a href="/index.html"><img src="img/logo.png" width="139" height="56" alt="Nerds"></a>
+                    </div>
+                    <nav class="main-navigation to-right">
+    				    <ul>
+    				        <li><a href="/index.html"><span>Студия</span></a></li>
+                            <li><a href="#"><span>Клиенты</span></a></li>
+                            <li><a href="#"><span class="current-page-site">Магазин</span></a></li>
+                            <li><a href="#"><span>Контакты</span></a></li>
+                            <li><a href="#"><span>Корзина</span></a></li>
+    				    </ul>
+                    </nav>
+                </div>
     			<div class="header-welcome">
                     <p>Добро пожаловать в магазин готовых макетов</p>
                 </div>
     		</div>
     	</header>
-    	<main class="conteiner">
-            <div class="catalog-filter-panel">
+    	<main class="container catalog clearfix">
+            <div class="catalog-filter-panel to-left">
                 <form>
                     <h3>Стоимость:</h3>
                     <div class="range-filter">
@@ -39,145 +45,203 @@
                         </div>
                     </div>
                     <h3 class="radio-caption">Сетка:</h3>
-                    <label class="control radio">
+                    <label class="filter-control filter-radio">
                         <input type="radio" name="grid" id="adaptive" checked>
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Адаптивная
                     </label>
-                    <label class="control radio">
+                    <label class="filter-control filter-radio">
                         <input type="radio" name="grid" id="fixed">
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Фиксированная
                     </label>
-                    <label class="control radio">
+                    <label class="filter-control filter-radio last-filter-radio">
                         <input type="radio" name="grid" id="rubber">
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Резиновая
                     </label>
                     <h3 class="checkbox-caption">Особенности:</h3>
-                    <label class="control checkbox">
+                    <label class="filter-control filter-checkbox">
                         <input type="checkbox" id="slider" checked>
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Слайдер
                     </label>
-                    <label class="control checkbox">
+                    <label class="filter-control filter-checkbox">
                         <input type="checkbox" id="advantages-bar">
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Блок преимуществ
                     </label>
-                    <label class="control checkbox">
+                    <label class="filter-control filter-checkbox">
                         <input type="checkbox" id="news" checked>
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Новости
                     </label>
-                    <label class="control checkbox">
+                    <label class="filter-control filter-checkbox">
                         <input type="checkbox" id="gallery">
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Галерея
                     </label>
-                    <label class="control checkbox">
+                    <label class="filter-control filter-checkbox">
                         <input type="checkbox" id="basket">
-                        <span class="control-indicator"></span>
+                        <span class="filter-control-indicator"></span>
                         Корзина
                     </label>
-                    <input type="submit" value="показать">
+                    <input class="btn grey-btn" type="submit" value="показать">
                 </form>
             </div>
-            <div class="catalog-panel">
+            <div class="catalog-panel to-right">
                 <div class="sort-bar">
-                    <span class="sort-bar-caption">Сортировать:</span>
-                    <ul class="sort-bar-list">
-                        <li><a href="#">По цене</a></li>
-                        <li><a href="#">По типу</a></li>
-                        <li><a href="#">По функционалу</a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
+                    <span class="sort-bar-caption to-left">Сортировать:</span>
+                    <label class="sort-bar-checkbox">
+                        <input type="checkbox" id="" checked>
+                        <span>По цене</span>
+                    </label>
+                    <label class="sort-bar-checkbox">
+                        <input type="checkbox" id="">
+                        <span>По типу</span>
+                    </label>
+                    <label class="sort-bar-checkbox">
+                        <input type="checkbox" id="">
+                        <span>По функционалу</span>
+                    </label>
+                    <label class="sort-bar-radio decrease-radio">
+                        <input type="radio" name="sort" id="decrease" checked>
+                        <span class="sort-bar-indicator"></span>
+                    </label>
+                    <label class="sort-bar-radio increase-radio">
+                        <input type="radio" name="sort" id="increase">
+                        <span class="sort-bar-indicator"></span>
+                    </label>
                 </div>
                 <div class="catalog-wrapper">
-                    <article>
-                        <div class="window-bar"></div>
-                        <a href="#"><img src="img/aviator.jpg" width="240" height="240" alt="Предпросмотр макета"></a>
-                        <div class="buy-layout-bar">
-                            <span>sunset</span>
-                            <span>Интернет магазин с личным кабинетом</span>
-                            <a href="#"><span>10000 р.</span></a>
+                    <article class="layout-wrapper">
+                        <div class="window-bar">
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                        </div>
+                        <div class="layout">
+                            <img src="/img/aviator.jpg" width="240" height="240" alt="Превью макета">
+                            <div class="buy-layout-bar">
+                                <span class="layout-caption">Aviator</span>
+                                <span class="layout-description">
+                                    Интернет магазин с личным кабинетом
+                                </span>
+                                <a class="btn red-btn buy-layout-btn" href="#"><span>10000 р.</span></a>
+                            </div>
                         </div>
                     </article>
-                    <article>
-                        <div class="window-bar"></div>
-                        <a href="#"><img src="img/sunset.jpg" width="240" height="240" alt="Предпросмотр макета"></a>
-                        <div class="buy-layout-bar">
-                            <span>sunset</span>
-                            <span>Интернет магазин с личным кабинетом</span>
-                            <a href="#"><span>10000 р.</span></a>
+                    <article class="layout-wrapper">
+                        <div class="window-bar">
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                        </div>
+                        <div class="layout">
+                            <img src="/img/sunset.jpg" width="240" height="240" alt="Превью макета">
+                            <div class="buy-layout-bar">
+                                <span class="layout-caption">Sunset</span>
+                                <span class="layout-description">
+                                    Интернет магазин с личным кабинетом
+                                </span>
+                                <a class="btn red-btn buy-layout-btn" href="#"><span>10000 р.</span></a>
+                            </div>
                         </div>
                     </article>
-                    <article>
-                        <div class="window-bar"></div>
-                        <a href="#"><img src="img/forte.jpg" width="240" height="240" alt="Предпросмотр макета"></a>
-                        <div class="buy-layout-bar">
-                            <span>sunset</span>
-                            <span>Интернет магазин с личным кабинетом</span>
-                            <a href="#"><span>10000 р.</span></a>
+                    <article class="layout-wrapper">
+                        <div class="window-bar">
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                        </div>
+                        <div class="layout">
+                            <img src="/img/forte.jpg" width="240" height="240" alt="Превью макета">
+                            <div class="buy-layout-bar">
+                                <span class="layout-caption">Forte</span>
+                                <span class="layout-description">
+                                    Интернет магазин с личным кабинетом
+                                </span>
+                                <a class="btn red-btn buy-layout-btn" href="#"><span>10000 р.</span></a>
+                            </div>
                         </div>
                     </article>
-                    <article>
-                        <div class="window-bar"></div>
-                        <a href="#"><img src="img/modern-organic-thai.jpg" width="240" height="240" alt="Предпросмотр макета"></a>
-                        <div class="buy-layout-bar">
-                            <span>sunset</span>
-                            <span>Интернет магазин с личным кабинетом</span>
-                            <a href="#"><span>10000 р.</span></a>
+                    <article class="layout-wrapper">
+                        <div class="window-bar">
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                        </div>
+                        <div class="layout">
+                            <img src="/img/modern-organic-thai.jpg" width="240" height="240" alt="Превью макета">
+                            <div class="buy-layout-bar">
+                                <span class="layout-caption">Modern Organic Thai</span>
+                                <span class="layout-description">
+                                    Интернет магазин с личным кабинетом
+                                </span>
+                                <a class="btn red-btn buy-layout-btn" href="#"><span>10000 р.</span></a>
+                            </div>
                         </div>
                     </article>
-                    <article>
-                        <div class="window-bar"></div>
-                        <a href="#"><img src="img/avenue.jpg" width="240" height="240" alt="Предпросмотр макета"></a>
-                        <div class="buy-layout-bar">
-                            <span>sunset</span>
-                            <span>Интернет магазин с личным кабинетом</span>
-                            <a href="#"><span>10000 р.</span></a>
+                    <article class="layout-wrapper">
+                        <div class="window-bar">
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                        </div>
+                        <div class="layout">
+                            <img src="/img/avenue.jpg" width="240" height="240" alt="Превью макета">
+                            <div class="buy-layout-bar">
+                                <span class="layout-caption">Avenue</span>
+                                <span class="layout-description">
+                                    Интернет магазин с личным кабинетом
+                                </span>
+                                <a class="btn red-btn buy-layout-btn" href="#"><span>10000 р.</span></a>
+                            </div>
                         </div>
                     </article>
-                    <article>
-                        <div class="window-bar"></div>
-                        <a href="#"><img src="img/dovetail.jpg" width="240" height="240" alt="Предпросмотр макета"></a>
-                        <div class="buy-layout-bar">
-                            <span>sunset</span>
-                            <span>Интернет магазин с личным кабинетом</span>
-                            <a href="#"><span>10000 р.</span></a>
+                    <article class="layout-wrapper">
+                        <div class="window-bar">
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                            <div class="circle-window-bar"></div>
+                        </div>
+                        <div class="layout">
+                            <img src="/img/dovetail.jpg" width="240" height="240" alt="Превью макета">
+                            <div class="buy-layout-bar">
+                                <span class="layout-caption">Dovetail</span>
+                                <span class="layout-description">
+                                    Интернет магазин с личным кабинетом
+                                </span>
+                                <a class="btn red-btn buy-layout-btn" href="#"><span>10000 р.</span></a>
+                            </div>
                         </div>
                     </article>
                 </div>
                 <div class="catalog-page-wrapper">
-                    <ul class="catalog-page-list">
-                        <li><a href="#">Предыдущая</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">Следующая</a></li>
-                    </ul>
+                    <a class="btn grey-btn catalog-page-btn current" href="#">1</a>
+                    <a class="btn grey-btn catalog-page-btn" href="#">2</a>
+                    <a class="btn grey-btn catalog-page-btn" href="#">3</a>
+                    <a class="btn grey-btn catalog-page-btn-next" href="#">Следующая</a>
                 </div>
             </div>
     	</main>
     	<footer>
     		<div class="map-wrapper">
-                 <div class="contact-block">
+                <div class="contact-block">
                     <h3 class="caption-contact-block">Nёrds disign studio</h3>
                     <p class="description-contact-block">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                    <p class="tel-contact-block">+7(812)275-75-75></p>
-                    <a class="btn-contact-block" href="#">Напишите нам</a>
+                    <p class="tel-contact-block">тел. +7(812)275-75-75</p>
+                    <a class="btn contact-block-btn red-btn" href="#">Напишите нам</a>
                 </div>
     		</div>
-    		<div class="footer-social">
-    			<div class="social-btn">
+    		<div class="footer-social container clearfix">
+    			<div class="social-btn-wrapper to-left">
     				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
     				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
     				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
     			</div>
-    			<div class="footer-welcome">
-    				<p>Давайте дружить, это выгодно!</p>
+    			<div class="footer-welcome to-left">
+    				<h2>Давайте дружить, это выгодно!</h2>
     				<p>Скидка 10% для друзей из социальных сетей</p>
     			</div>
     		</div>

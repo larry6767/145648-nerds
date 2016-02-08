@@ -3,81 +3,106 @@
 	<head>
     	<meta charset="utf-8">
     	<title>HTML Academy: Нёрдс</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
     	<header class="main-header">
-    		<div class="conteiner">
-    			<nav class="main-navigation">
-    				<ul>
-    					<li><a href="#"><img src="img/logo.png" width="139" height="56" alt="Nerds"></a></li>
-    					<li><a href="#">Студия</a></li>
-    					<li><a href="#">Клиенты</a></li>
-    					<li><a href="#">Магазин</a></li>
-    					<li><a href="#">Контакты</a></li>
-    					<li><a href="#">Корзина</a></li>
-    				</ul>
-    			</nav>
+    		<div class="container">
+                <div class="logo-navigation-wrapper clearfix">
+                    <div class="logo to-left">
+                        <a href="#"><img src="img/logo.png" width="139" height="56" alt="Nerds"></a>
+                    </div>
+                    <nav class="main-navigation to-right">
+    				    <ul>
+                            <li><a href="#"><span class="current-page-site">Студия</span></a></li>
+                            <li><a href="#"><span>Клиенты</span></a></li>
+                            <li><a href="/catalog.html"><span>Магазин</span></a></li>
+                            <li><a href="#"><span>Контакты</span></a></li>
+                            <li><a href="#"><span>Корзина</span></a></li>
+    				    </ul>
+                    </nav>
+                </div>
     			<div class="slider-wrapper">
-    				<div class="slide-info">
-    					<h2>Быстро, дорого, скрупулезно.</h2>
-    					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-    					<a href="#">Узнать больше</a>
-    				</div>
-    				<img src="img/first-slide.png" width="338" height="231" alt="Слайд">
+                    <div class="slider clearfix">
+    				    <div class="slide-info to-left">
+    					   <h2>Долго, дорого, скрупулезно.</h2>
+    					   <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+    					   <a class="btn red-btn" href="#">Узнать больше</a>
+    				    </div>
+                        <div class="image-wrapper to-right">
+                            <img src="img/first-slide.png" width="338" height="231" alt="Слайд">
+                        </div>
+                    </div>
     				<div class="slide-pages">
-    					<a href="#"><div class="point"></div></a>
-    					<a href="#"></a>
-    					<a href="#"></a>
-    				</div>
-    			</div>
-    		</div>
+    				    <label class="control radio">
+                            <input type="radio" name="slide-page" id="first-slide" checked>
+                            <span class="control-indicator"></span>
+                        </label>
+                        <label class="control radio">
+                            <input type="radio" name="slide-page" id="second-slide">
+                            <span class="control-indicator"></span>
+                        </label>
+                        <label class="control radio">
+                            <input type="radio" name="slide-page" id="third-slide">
+                            <span class="control-indicator"></span>
+                        </label>
+    				</div>      
+                </div>
+            </div>
     	</header>
-    	<main class="conteiner">
-    		<div class="services-panel">
-    			<article class="web-sites">
+    	<main class="container">
+    		<div class="services-panel clearfix">
+    			<article class="services web-sites to-left">
     				<img src="img/web-sites.png" width="240" height="124" alt="Веб-сайты">
     				<h3>Веб-сайты</h3>
     				<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-    				<a href="#">Заказать</a>
+    				<a class="btn red-btn" href="#">Заказать</a>
     			</article>
-    			<article class="applications">
+    			<article class="services applications to-left">
     				<img src="img/applications.png" width="240" height="124" alt="Приложения">
     				<h3>Приложения</h3>
     				<p>Покорите топ-10 приложений в AppStore и Google Play</p>
-    				<a href="#">Заказать</a>
+    				<a class="btn green-btn" href="#">Заказать</a>
     			</article>
-    			<article class="presentation">
+    			<article class="services presentation to-left">
     				<img src="img/presentation.png" width="240" height="124" alt="Презентации">
     				<h3>Презентации</h3>
     				<p>Вы даже не подозреваете, насколько вы изумительны!</p>
-    				<a href="#">Заказать</a>
+    				<a class="btn yellow-btn" href="#">Заказать</a>
     			</article>
     		</div>
-    		<div class="about-us-panel">
-    			<div class="left-about-us-panel">
-    				<h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
+    		<div class="about-us-panel-top clearfix">
+    			<div class="left-top-about-us-panel to-left">
+    				<h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
     				<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчёт выше креатива. Работаем не покладая рук, как роботы.</p>
+                </div>
+    			<div class="right-top-about-us-panel to-right">
+    				<img src="img/logo-since.png" width="240" height="119" alt="Nerds">
+                </div>
+            </div>
+            <div class="about-us-panel-bottom clearfix">
+                <div class="left-bottom-about-us-panel to-left">
     				<p>Выполняем заказы на разработку:</p>
     				<ul>
-    					<li>Веб-сайтов любой сложности</li>
-    					<li>Мобильных приложений для IOS и Android</li>
-    					<li>Слайдшоу и видео для корпоративных презентаций</li>
+    					<li><span></span>Веб-сайтов любой сложности</li>
+    					<li><span></span>Мобильных приложений для IOS и Android</li>
+    					<li><span></span>Слайдшоу и видео для корпоративных презентаций</li>
     				</ul>
     			</div>
-    			<div class="right-about-us-panel">
-    				<img src="img/logo-since.png" width="240" height="119" alt="Nerds">
+                <div class="right-bottom-about-us-panel to-right">
     				<p>Как мы работаем:</p>
     				<ul>
-    					<li>С самоотдачей 146%</li>
-    					<li>Соблюдая сроки на 100%</li>
-    					<li>По предоплате 50%</li>
+    					<li><span></span>С самоотдачей 146%</li>
+    					<li><span></span>Соблюдая сроки на 100%</li>
+    					<li><span></span>По предоплате 50%</li>
     				</ul>
     			</div>
     		</div>
     		<div class="project-panel">
     			<a class="project-link" href="#"><img src="img/glukhanko.png" width="198" height="37" alt="Glukhanko"></a>
-    			<a class="project-link" href="#"><img src="img/html-academy.png" width="199" height="68" alt="HTML Academy"></a>
+    			<a class="project-link" href="https://htmlacademy.ru/"><img src="img/html-academy.png" width="199" height="68" alt="HTML Academy"></a>
     			<a class="project-link" href="#"><img src="img/borodinski.png" width="209" height="90" alt="Borodinski"></a>
     		</div>
     	</main>
@@ -86,18 +111,18 @@
                 <div class="contact-block">
                     <h3 class="caption-contact-block">Nёrds disign studio</h3>
                     <p class="description-contact-block">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                    <p class="tel-contact-block">+7(812)275-75-75></p>
-                    <a class="btn-contact-block" href="#">Напишите нам</a>
+                    <p class="tel-contact-block">тел. +7(812)275-75-75</p>
+                    <a class="btn contact-block-btn red-btn" href="#">Напишите нам</a>
                 </div>
     		</div>
-    		<div class="footer-social">
-    			<div class="social-btn">
+    		<div class="footer-social container clearfix">
+    			<div class="social-btn-wrapper to-left">
     				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
     				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
     				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
     			</div>
-    			<div class="footer-welcome">
-    				<p>Давайте дружить, это выгодно!</p>
+    			<div class="footer-welcome to-left">
+    				<h2>Давайте дружить, это выгодно!</h2>
     				<p>Скидка 10% для друзей из социальных сетей</p>
     			</div>
     		</div>
