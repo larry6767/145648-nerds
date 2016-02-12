@@ -11,25 +11,16 @@
     font-style: normal;
 }
 body {
-	font-size: 16px;
-	line-height: 1.375;
+	font: bold 16px/1.375 "Roboto", "Times New Roman", sans-serif;
 	color: #283136;
-	font-weight: bold;
-	font-family: "Roboto", "Times New Roman", sans-serif;
 }
 h2 {
-	font-size: 36px;
-	line-height: 1;
+	font-size: bold 36px/1 "Roboto", "Times New Roman", sans-serif;
 	color: #000000;
-	font-weight: bold;
-	font-family: "Roboto", "Times New Roman", sans-serif;
 }
 h3 {
-	font-size: 18px;
-	line-height: 1.6;
+	font-size: bold 18px/1.6 "Roboto", "Times New Roman", sans-serif;
 	color: #000000;
-	font-weight: bold;
-	font-family: "Roboto", "Times New Roman", sans-serif;
 }
 
 /*-----------------------*/
@@ -52,15 +43,15 @@ h3 {
 }
 .btn {
     display: inline-block;
-    padding: 10px 40px;
-    border-radius: 3px;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #ffffff;
+    vertical-align: top;
+    padding: 10px 40px; 
+    font: bold 12px/1.5 "Roboto", "Times New Roman", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
+    color: #ffffff;
+    border-radius: 3px;
     transition-duration: 150ms;
-    transition-property: background, box-shadow;
+    transition-property: background;
 }
 .red-btn {
     background: #fb565a;
@@ -132,8 +123,8 @@ h3 {
 .main-navigation li {
     display: inline-block;
     vertical-align: top;
-    font-size: 14px;
     margin: 10px 0;
+    font-size: 14px;
 }
 .main-navigation a {
     display: block;
@@ -152,9 +143,9 @@ h3 {
 }
 .main-navigation span {
     display: block;
+    margin: 0;
     padding: 0;
-    padding-bottom: 3px;
-    margin: 0;    
+    padding-bottom: 3px;    
 }
 .main-navigation li:last-child a {
     position: relative;
@@ -183,21 +174,21 @@ h3 {
     margin-left: 40px;
 }
 .map-wrapper {
-    width: 1200px;
-    min-height: 416px;
     position: relative;
+    width: 1200px;
+    min-height: 416px;  
     margin: 0 auto;
     margin-bottom: 45px;
     background: url("../img/map.jpg") no-repeat;
 }
 .contact-block {
-    width: 210px;
     position: absolute;
     left: 160px;
     top: 88px;
-    background: #ffffff;
+    width: 210px;
     padding: 0 20px;
     padding-top: 10px;
+    background: #ffffff;
 }
 .contact-block .caption-contact-block {
     padding: 0;
@@ -208,13 +199,13 @@ h3 {
     font-size: 16px;
 }
 .contact-block .tel-contact-block {
-    font-size: 16px;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 .contact-block .contact-block-btn {
     margin: 0 auto;
-    padding: 10px 55px;
     margin-bottom: 25px;
+    padding: 10px 55px;
 }
 .footer-social {
     margin-bottom: 40px;
@@ -231,14 +222,16 @@ h3 {
     vertical-align: top;
     width: 62px;
     height: 62px;
-    border-radius: 31px;
     margin-right: 27px;
+    border-radius: 31px;
     background: #e1e1e1;
     transition-duration: 150ms;
-    transition-property: background, box-shadow;
+    transition-property: background;
 }
 .social-btn:hover {
     background: #fb565a;
+    transform: rotate(360deg);
+    transition: transform 800ms;
 }
 .social-btn:active {
     background: #d6494d;
@@ -248,13 +241,13 @@ h3 {
     margin-right: 0;
 }
 .social-btn:before {
-    display: block;
     position: absolute;
+    top: 20px;
+    left:18px;
+    display: block;
     content: "";
     width: 26px;
-    height: 22px;
-    top: 20px;
-    left:18px; 
+    height: 22px; 
 }
 .social-btn-vk::before {
     background: url("../img/sprite.png") no-repeat;
@@ -290,10 +283,10 @@ h3 {
     margin-bottom: 80px;
 }
 .slide {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -332,13 +325,13 @@ h3 {
 }
 .slider-controls {
     position: absolute;
+    left: 40%;
+    bottom: 95px;
+    z-index: 10;
     width: 20%;
     height: 10px;
-    bottom: 95px;
-    left: 40%;
-    text-align: center;
     font-size: 0;
-    z-index: 10;
+    text-align: center;
 }
 .slider-wrapper input {
     display: none;
@@ -374,9 +367,9 @@ h3 {
 }
 .services h3 {
     margin: 0;
-    text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 .services p {
     margin-bottom: 25px;
@@ -385,9 +378,9 @@ h3 {
 }
 .about-us-panel-top {
     width: 880px;
-    border-top: 2px solid #eeeeee;
     padding-top: 40px;
     margin-bottom: 10px;
+    border-top: 2px solid #eeeeee;
 }
 .left-top-about-us-panel {
     width: 620px;
@@ -416,9 +409,9 @@ h3 {
 }
 .about-us-panel-bottom span {
     display: inline-block;
+    vertical-align: middle;
     width: 25px;
     height: 2px;
-    vertical-align: middle;
     margin-right: 10px;
     background: #fb565a;
 }
@@ -429,18 +422,18 @@ h3 {
     margin-bottom: 20px;
 }
 .project-panel {
-    border-top: 2px solid #eeeeee;
     padding-top: 40px;
-    border-bottom: 2px solid #eeeeee;
     padding-bottom: 30px;
     margin-bottom: 85px;
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
     font-size: 0;
 }
 .project-link {
     display: inline-block;
     vertical-align: middle;
-    font-size: 16px;
     margin-right: 120px;
+    font-size: 16px;    
 }
 .project-link:last-child {
     margin-right: 0;
@@ -453,40 +446,43 @@ h3 {
 }
 .project-panel img:hover {
     opacity: 1;
+    transition-duration: 400ms;
 }
+
+/*Модальное окно*/
 .modal-content {
-    display: none;
     position: fixed;
-    width: 470px;
     left: 50%;
     bottom: 250px;
+    z-index: 15;
+    display: none;
+    width: 470px;
     margin-left: -325px;
     padding: 50px 80px;
     background: #ffffff;
     box-shadow: 0 20px 60px 0 #000000;
-    z-index: 15;
 }
 .modal-content .close-btn {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    font-size: 0;
-    padding: 0;
     top: 5px;
     right: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 0;
+    border-radius: 20px;
+    border: none;
 }
 .close-btn::after,
 .close-btn::before {
-    content: "";
     position: absolute;
+    top: 17px;
+    right: 7px;
+    content: "";
     width: 26px;
     height: 5px;
     background: #ffffff;
-    border-radius: 1px;
-    top: 17px;
-    right: 7px;
+    border-radius: 1px;  
 }
 .close-btn::after {
     transform: rotate(45deg);
@@ -496,6 +492,7 @@ h3 {
 }
 .modal-content .half-width {
     display: inline-block;
+    vertical-align: top;
     width: 50%;
     margin-right: -4px;
 }
@@ -510,10 +507,10 @@ h3 {
 .modal-content input {
     width: 190px;
     padding: 8px 15px;
-    border: 2px solid #d7dcde;
-    border-radius: 2px;
     font: 12px/1.5 "Roboto", "Times New Roman", sans-serif;
     text-transform: uppercase;
+    border: 2px solid #d7dcde;
+    border-radius: 2px;
 }
 .mail-text textarea {
     margin-bottom: 40px;
@@ -524,8 +521,8 @@ h3 {
     border-radius: 2px;
 }
 .modal-content .btn-modal-content {
-    border: none;
     width: 98%;
+    border: none;
 }
 
 /*-----------------*/
@@ -541,8 +538,7 @@ h3 {
     margin: 0 auto;
     margin-top: 50px;
     padding-bottom: 45px;
-    font-size: 40px;
-    line-height: 1.2;
+    font: 40px/1.2 "Roboto", "Times New Roman", sans-serif;
     text-transform: uppercase;
     text-align: center;
 }
@@ -569,15 +565,15 @@ h3 {
     overflow: hidden;
 }
 .scale {
-    margin-top: 39px;
     height: 2px;
+    margin-top: 39px;
     background: #d7dcde;
 }
 .bar {
     height: 2px;
-    background: #00ca74;
-    margin-left: 10px;
     width: 140px;
+    margin-left: 10px;
+    background: #00ca74;
 }
 .toggle {
     position: absolute;
@@ -586,8 +582,8 @@ h3 {
     width: 4px;
     height: 4px;
     border: 8px solid #ffffff;
-    background: #ababab;
     border-radius: 50px;
+    background: #ababab;
     cursor: pointer;
 }
 .min-toggle {
@@ -604,15 +600,12 @@ h3 {
     width: 60px;
     padding: 8px 10px;
     margin-left: 10px;
+    text-align: center;
+    font: bold 16px/1.375 "Roboto", sans-serif, "Times New Roman";
     border: none;
     border-radius: 5px;
-    background: #f1f1f1;
-    text-align: center;
-    font-size: 16px;
-	line-height: 1.375;
 	color: #283136;
-	font-weight: bold;
-	font-family: "Roboto", sans-serif, "Times New Roman";
+    background: #f1f1f1;
 }
 .min-price {
     margin-right: 12px;
@@ -623,6 +616,9 @@ h3 {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance:textfield;
 }
 .filter-control input {
     display: none;
@@ -639,11 +635,11 @@ input::-webkit-inner-spin-button {
 }
 .catalog-filter-panel .filter-control-indicator {
     position: absolute;
+    top: -3px;
+    left: -1px;
     display: block;
     width: 29px;
     height: 27px;
-    top: -3px;
-    left: -1px;
     background: url("../img/sprite.png") no-repeat;
 }
 .filter-radio .filter-control-indicator {  
@@ -659,9 +655,9 @@ input::-webkit-inner-spin-button {
     background-position: -50px -143px;
 }
 .catalog-filter-panel .btn {
-    border: none;
     padding: 10px 45px;
     margin-top: 30px;
+    border: none;
 }
 
 /*Панель сортировки товаров*/
@@ -671,8 +667,7 @@ input::-webkit-inner-spin-button {
 .sort-bar {
     margin-top: 2px;
     margin-bottom: 21px;
-    font-size: 12px;
-    line-height: 1.5;
+    font: bold 12px/1.5 "Roboto", sans-serif, "Times New Roman";
     text-transform: uppercase;
 }
 .sort-bar-checkbox input,
@@ -696,8 +691,8 @@ input::-webkit-inner-spin-button {
 }
 /*-----------------------------*/
 .sort-bar-radio {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     vertical-align: top;
     width: 18px;
     height: 18px;
@@ -708,10 +703,10 @@ input::-webkit-inner-spin-button {
     margin-left: 0;
 }
 .sort-bar-radio span {
-    display: block;
     position: absolute;
     top: 3px;
     left: 3px;
+    display: block;
     width: 12px;
     height: 12px;
     background: url("../img/sprite.png") no-repeat;
@@ -735,10 +730,10 @@ input::-webkit-inner-spin-button {
 }
 .layout-wrapper {
     display: inline-block;
-    width: 240px;
     vertical-align: top;
-    font-size: 16px;
+    width: 240px;
     margin-bottom: 80px;
+    font-size: 16px;
 }
 .layout-wrapper:nth-child(2n-1) {
     margin-right: 80px;
@@ -752,6 +747,7 @@ input::-webkit-inner-spin-button {
 }
 .circle-window-bar {
     display: inline-block;
+    vertical-align: top;
     width: 10px;
     height: 10px;
     margin-top: 10px;
@@ -768,36 +764,33 @@ input::-webkit-inner-spin-button {
 .layout {
     position: relative;
     width: 240px;
-    height: 240px;
 }
 .buy-layout-bar {
     position: absolute;
+    top: 20px;
+    left: 20px;
     width: 200px;
     min-height: 200px;
     background: #ffffff;
-    top: 20px;
-    left: 20px;
     visibility: hidden;
 }
 .layout-wrapper:hover .buy-layout-bar {
     visibility: visible;
 }
 .buy-layout-bar .layout-caption {
-    position: relative;
     display: block;
     padding: 0 25px;
     padding-top: 35px;
     padding-bottom: 15px;
-    font-size: 18px;
-    line-height: 1;
+    font: bold 18px/1 "Roboto", sans-serif, "Times New Roman";
     text-align: center;
     text-transform: uppercase;
 }
 .buy-layout-bar .layout-description {
     display: block;
     padding: 0 10px;
-    font-size: 14px;
-    line-height: 1.3;
+    margin-bottom: 30px;
+    font: bold 14px/1.3 "Roboto", sans-serif, "Times New Roman";
     text-align: center;
 }
 .buy-layout-bar .buy-layout-btn {
@@ -805,8 +798,7 @@ input::-webkit-inner-spin-button {
     bottom: 30px;
     padding: 10px 35px;
     margin-left: 30px;
-    font-size: 18px;
-    line-height: 1;
+    font: bold 18px/1 "Roboto", sans-serif, "Times New Roman";
     text-transform: uppercase;
 }
 .catalog-page-wrapper {
@@ -816,8 +808,7 @@ input::-webkit-inner-spin-button {
     margin-left: 0;
     margin-right: 10px;
     padding: 10px 16px;
-    font-size: 12px;
-    line-height: 1.5;
+    font: bold 12px/1.5 "Roboto", sans-serif, "Times New Roman";
 }
 .current {
     margin-right: 60px;
