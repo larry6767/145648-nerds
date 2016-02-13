@@ -92,18 +92,9 @@
             <div class="catalog-panel to-right">
                 <div class="sort-bar">
                     <span class="sort-bar-caption to-left">Сортировать:</span>
-                    <label class="sort-bar-checkbox">
-                        <input type="checkbox" id="price" checked>
-                        <span>По цене</span>
-                    </label>
-                    <label class="sort-bar-checkbox">
-                        <input type="checkbox" id="type">
-                        <span>По типу</span>
-                    </label>
-                    <label class="sort-bar-checkbox">
-                        <input type="checkbox" id="functionality">
-                        <span>По функционалу</span>
-                    </label>
+                    <a href="#" class="sort-bar-btn"><span>По цене</span></a>
+                    <a href="#" class="sort-bar-btn"><span>По типу</span></a>
+                    <a href="#" class="sort-bar-btn"><span>По функционалу</span></a>
                     <label class="sort-bar-radio decrease-radio">
                         <input type="radio" name="sort" id="decrease" checked>
                         <span class="sort-bar-indicator"></span>
@@ -227,6 +218,8 @@
     	</main>
     	<footer>
     		<div class="map-wrapper">
+                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=25k9J6LSDjF8zcoWbDyX_TcAWF2tCL-e&width=1200&height=416&lang=ru_RU&sourceType=constructor">
+                </script>
                 <div class="contact-block">
                     <h3 class="caption-contact-block">Nёrds disign studio</h3>
                     <p class="description-contact-block">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -246,5 +239,40 @@
     			</div>
     		</div>
     	</footer>
+        <div class="modal-content">
+            <button class="close-btn btn red-btn"></button>
+            <form>
+                <div class="half-width">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" placeholder="Представтесь, пожалуйста">
+                </div>
+                <div class="half-width">
+                    <label for="e-mail">Ваш e-mail:</label>
+                    <input type="email" id="e-mail" placeholder="Для отправки ответа">
+                </div>
+                <div class="mail-text">
+                    <label for="mail-text">Текст письма</label>
+                    <textarea rows="5" cols="68" id="mail-text">В свободной форме</textarea>
+                </div>
+                <div class="">
+                    <button class="btn red-btn btn-modal-content" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
     </body>
+    <script>
+        var link = document.querySelector(".contact-block-btn");
+        var popup = document.querySelector(".modal-content");
+        var close = document.querySelector(".close-btn");
+        
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.add("modal-content-show");
+        });
+        
+        close.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.remove("modal-content-show");
+        });
+    </script>
 </html>

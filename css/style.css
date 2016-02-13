@@ -271,6 +271,94 @@ h3 {
     margin: 0;
 }
 
+/*Модальное окно*/
+.modal-content {
+    position: fixed;
+    left: 50%;
+    bottom: 250px;
+    z-index: 15;
+    display: none;
+    width: 470px;
+    margin-left: -325px;
+    padding: 50px 80px;
+    background: #ffffff;
+    box-shadow: 0 20px 60px 0 #000000;
+}
+@keyframes floating {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.modal-content-show {
+    display: block;
+    animation: floating 0.5s;
+}
+.modal-content .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    border-radius: 20px;
+}
+.close-btn::after,
+.close-btn::before {
+    position: absolute;
+    top: 17px;
+    right: 7px;
+    content: "";
+    width: 26px;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 1px;  
+}
+.close-btn::after {
+    transform: rotate(45deg);
+}
+.close-btn::before {
+    transform: rotate(-45deg);
+}
+.modal-content .half-width {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-right: -4px;
+}
+.modal-content label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.half-width label {
+    margin-top: 5px;
+}
+.modal-content input {
+    width: 190px;
+    padding: 8px 15px;
+    font: 12px/1.5 "Roboto", "Times New Roman", sans-serif;
+    text-transform: uppercase;
+    border: 2px solid #d7dcde;
+    border-radius: 2px;
+}
+.mail-text textarea {
+    margin-bottom: 40px;
+    padding: 10px 15px;
+    font: 12px/1.5 "Roboto", "Times New Roman", sans-serif;
+    text-transform: uppercase;
+    border: 2px solid #d7dcde;
+    border-radius: 2px;
+}
+.modal-content .btn-modal-content {
+    width: 98%;
+    border: none;
+}
+
 /*----------------*/
 /*Главная страница*/
 /*----------------*/
@@ -449,81 +537,6 @@ h3 {
     transition-duration: 400ms;
 }
 
-/*Модальное окно*/
-.modal-content {
-    position: fixed;
-    left: 50%;
-    bottom: 250px;
-    z-index: 15;
-    display: none;
-    width: 470px;
-    margin-left: -325px;
-    padding: 50px 80px;
-    background: #ffffff;
-    box-shadow: 0 20px 60px 0 #000000;
-}
-.modal-content .close-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    font-size: 0;
-    border-radius: 20px;
-    border: none;
-}
-.close-btn::after,
-.close-btn::before {
-    position: absolute;
-    top: 17px;
-    right: 7px;
-    content: "";
-    width: 26px;
-    height: 5px;
-    background: #ffffff;
-    border-radius: 1px;  
-}
-.close-btn::after {
-    transform: rotate(45deg);
-}
-.close-btn::before {
-    transform: rotate(-45deg);
-}
-.modal-content .half-width {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    margin-right: -4px;
-}
-.modal-content label {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-.half-width label {
-    margin-top: 5px;
-}
-.modal-content input {
-    width: 190px;
-    padding: 8px 15px;
-    font: 12px/1.5 "Roboto", "Times New Roman", sans-serif;
-    text-transform: uppercase;
-    border: 2px solid #d7dcde;
-    border-radius: 2px;
-}
-.mail-text textarea {
-    margin-bottom: 40px;
-    padding: 10px 15px;
-    font: 12px/1.5 "Roboto", "Times New Roman", sans-serif;
-    text-transform: uppercase;
-    border: 2px solid #d7dcde;
-    border-radius: 2px;
-}
-.modal-content .btn-modal-content {
-    width: 98%;
-    border: none;
-}
 
 /*-----------------*/
 /*Страница каталога*/
@@ -670,26 +683,30 @@ input[type=number] {
     font: bold 12px/1.5 "Roboto", sans-serif, "Times New Roman";
     text-transform: uppercase;
 }
-.sort-bar-checkbox input,
 .sort-bar-radio input {
     display: none;
 }
-.sort-bar-checkbox {
+.sort-bar-btn {
     margin-left: 20px;
     padding: 10px 10px;
-    cursor: pointer;
+    text-decoration: none;
+    color: #283136;
 }
-.sort-bar-checkbox:first-of-type {
+.sort-bar-btn:first-of-type {
     margin-left: 30px;
 }
-/*мне кажется такая стилизация логичнее (предложил бы дизайнеру такой вариант)*/
-.sort-bar-checkbox span:hover {
-    border-bottom: 2px dotted #00ca74; 
+.sort-bar-btn span {
+    border-bottom: 2px dotted #00ca74;
 }
-.sort-bar-checkbox input:checked + span {
-    border-bottom: 2px solid #00ca74;
+.sort-bar-btn:visited span {
+    border: none; 
 }
-/*-----------------------------*/
+.sort-bar-btn:hover span {
+    border-bottom: 2px solid #00ca74; 
+}
+.sort-bar-btn:active span {
+    border:none;
+}
 .sort-bar-radio {
     position: relative;
     display: inline-block;
@@ -743,7 +760,16 @@ input[type=number] {
     height: 30px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: #f1f1f1;
+    background: #797979;
+    opacity: 0.1;
+}
+@keyframes floating {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .circle-window-bar {
     display: inline-block;
@@ -759,7 +785,8 @@ input[type=number] {
     margin-left: 10px;
 }
 .layout-wrapper:hover .window-bar {
-    background: #797979;
+    opacity: 1;
+    animation: floating 250ms;
 }
 .layout {
     position: relative;
@@ -772,10 +799,11 @@ input[type=number] {
     width: 200px;
     min-height: 200px;
     background: #ffffff;
-    visibility: hidden;
+    opacity: 0;
 }
 .layout-wrapper:hover .buy-layout-bar {
-    visibility: visible;
+    animation: floating 250ms;
+    opacity: 1;
 }
 .buy-layout-bar .layout-caption {
     display: block;

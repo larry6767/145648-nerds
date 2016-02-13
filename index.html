@@ -115,6 +115,8 @@
     	</main>
     	<footer>
     		<div class="map-wrapper">
+                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=25k9J6LSDjF8zcoWbDyX_TcAWF2tCL-e&width=1200&height=416&lang=ru_RU&sourceType=constructor">
+                </script>
                 <div class="contact-block">
                     <h3 class="caption-contact-block">Nёrds disign studio</h3>
                     <p class="description-contact-block">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -155,4 +157,19 @@
             </form>
         </div>
     </body>
+    <script>
+        var link = document.querySelector(".contact-block-btn");
+        var popup = document.querySelector(".modal-content");
+        var close = document.querySelector(".close-btn");
+        
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.add("modal-content-show");
+        });
+        
+        close.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.remove("modal-content-show");
+        });
+    </script>
 </html>
