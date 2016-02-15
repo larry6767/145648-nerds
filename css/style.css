@@ -10,6 +10,11 @@
     font-weight: 700;
     font-style: normal;
 }
+
+/*--------------------------*/
+/*======general styles======*/
+/*--------------------------*/
+
 body {
 	font: bold 16px/1.375 "Roboto", "Times New Roman", sans-serif;
 	color: #283136;
@@ -22,11 +27,6 @@ h3 {
 	font-size: bold 18px/1.6 "Roboto", "Times New Roman", sans-serif;
 	color: #000000;
 }
-
-/*-----------------------*/
-/*Общие стили для страниц*/
-/*-----------------------*/
-
 .clearfix {
     content: "";
     display: table;
@@ -38,9 +38,26 @@ h3 {
 .to-right {
     float: right;
 }
-.current-page-site {
-    border-bottom: 2px solid #fb565a;
+
+/*------animation------*/
+@keyframes floating {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+@keyframes floating {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*------buttons------*/
 .btn {
     display: inline-block;
     vertical-align: top;
@@ -95,6 +112,11 @@ h3 {
     background: #d5d5d5;
     color: #283136;
     box-shadow: inset 0 3px #b5b5b5;
+}
+
+/*------header------*/
+.current-page-site {
+    border-bottom: 2px solid #fb565a;
 }
 .main-header {
     margin-bottom: 0;
@@ -173,6 +195,8 @@ h3 {
 .main-navigation li:last-child {
     margin-left: 40px;
 }
+
+/*------footer------*/
 .map-wrapper {
     position: relative;
     width: 1200px;
@@ -185,6 +209,7 @@ h3 {
     position: absolute;
     left: 160px;
     top: 88px;
+    z-index: 10;
     width: 210px;
     padding: 0 20px;
     padding-top: 10px;
@@ -271,7 +296,7 @@ h3 {
     margin: 0;
 }
 
-/*Модальное окно*/
+/*------modal content------*/
 .modal-content {
     position: fixed;
     left: 50%;
@@ -283,14 +308,7 @@ h3 {
     padding: 50px 80px;
     background: #ffffff;
     box-shadow: 0 20px 60px 0 #000000;
-}
-@keyframes floating {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    font-size: 0;
 }
 .modal-content-show {
     display: block;
@@ -328,12 +346,12 @@ h3 {
     display: inline-block;
     vertical-align: top;
     width: 50%;
-    margin-right: -4px;
 }
 .modal-content label {
     display: block;
     margin-top: 20px;
     margin-bottom: 5px;
+    font-size: 16px;
 }
 .half-width label {
     margin-top: 5px;
@@ -346,6 +364,9 @@ h3 {
     border: 2px solid #d7dcde;
     border-radius: 2px;
 }
+.modal-content input:focus {
+    border: 2px solid #57bffb;
+}
 .mail-text textarea {
     margin-bottom: 40px;
     padding: 10px 15px;
@@ -354,14 +375,17 @@ h3 {
     border: 2px solid #d7dcde;
     border-radius: 2px;
 }
+.mail-text textarea:focus {
+    border: 2px solid #57bffb;
+}
 .modal-content .btn-modal-content {
-    width: 98%;
+    width: 460px;
     border: none;
 }
 
-/*----------------*/
-/*Главная страница*/
-/*----------------*/
+/*----------------------*/
+/*======index page======*/
+/*----------------------*/
 
 .slider-wrapper {
     position: relative;
@@ -479,7 +503,8 @@ h3 {
 }
 .about-us-panel-bottom {
     width: 880px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #eeeeee;
 }
 .left-bottom-about-us-panel {
     width: 620px;
@@ -513,7 +538,6 @@ h3 {
     padding-top: 40px;
     padding-bottom: 30px;
     margin-bottom: 85px;
-    border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
     font-size: 0;
 }
@@ -538,9 +562,9 @@ h3 {
 }
 
 
-/*-----------------*/
-/*Страница каталога*/
-/*-----------------*/
+/*------------------------*/
+/*======Catalog page======*/
+/*------------------------*/
 
 .catalog {
     margin-top: 75px;
@@ -556,7 +580,7 @@ h3 {
     text-align: center;
 }
 
-/*Фильтр*/
+/*------filter------*/
 .catalog-filter-panel {
     width: 240px;
 }
@@ -614,7 +638,7 @@ h3 {
     padding: 8px 10px;
     margin-left: 10px;
     text-align: center;
-    font: bold 16px/1.375 "Roboto", sans-serif, "Times New Roman";
+    font: bold 16px/1.375 "Roboto", "Times New Roman", sans-serif;
     border: none;
     border-radius: 5px;
 	color: #283136;
@@ -673,14 +697,14 @@ input[type=number] {
     border: none;
 }
 
-/*Панель сортировки товаров*/
+/*------sort bar------*/
 .catalog-panel {
     width: 560px;
 }
 .sort-bar {
     margin-top: 2px;
     margin-bottom: 21px;
-    font: bold 12px/1.5 "Roboto", sans-serif, "Times New Roman";
+    font: bold 12px/1.5 "Roboto", "Times New Roman", sans-serif;
     text-transform: uppercase;
 }
 .sort-bar-radio input {
@@ -699,7 +723,7 @@ input[type=number] {
     border-bottom: 2px dotted #00ca74;
 }
 .sort-bar-btn:visited span {
-    border: none; 
+    border-bottom: none; 
 }
 .sort-bar-btn:hover span {
     border-bottom: 2px solid #00ca74; 
@@ -741,7 +765,7 @@ input[type=number] {
     background-position: -107px -151px;
 }
 
-/*Панель каталога*/
+/*------catalog panel------*/
 .catalog-wrapper {
     font-size: 0;
 }
@@ -762,14 +786,6 @@ input[type=number] {
     border-top-right-radius: 5px;
     background: #797979;
     opacity: 0.1;
-}
-@keyframes floating {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 .circle-window-bar {
     display: inline-block;
@@ -810,7 +826,7 @@ input[type=number] {
     padding: 0 25px;
     padding-top: 35px;
     padding-bottom: 15px;
-    font: bold 18px/1 "Roboto", sans-serif, "Times New Roman";
+    font: bold 18px/1 "Roboto", "Times New Roman", sans-serif;
     text-align: center;
     text-transform: uppercase;
 }
@@ -818,7 +834,7 @@ input[type=number] {
     display: block;
     padding: 0 10px;
     margin-bottom: 30px;
-    font: bold 14px/1.3 "Roboto", sans-serif, "Times New Roman";
+    font: bold 14px/1.3 "Roboto", "Times New Roman", sans-serif;
     text-align: center;
 }
 .buy-layout-bar .buy-layout-btn {
@@ -826,7 +842,7 @@ input[type=number] {
     bottom: 30px;
     padding: 10px 35px;
     margin-left: 30px;
-    font: bold 18px/1 "Roboto", sans-serif, "Times New Roman";
+    font: bold 18px/1 "Roboto", "Times New Roman", sans-serif;
     text-transform: uppercase;
 }
 .catalog-page-wrapper {
@@ -836,7 +852,7 @@ input[type=number] {
     margin-left: 0;
     margin-right: 10px;
     padding: 10px 16px;
-    font: bold 12px/1.5 "Roboto", sans-serif, "Times New Roman";
+    font: bold 12px/1.5 "Roboto", "Times New Roman", sans-serif;
 }
 .current {
     margin-right: 60px;
