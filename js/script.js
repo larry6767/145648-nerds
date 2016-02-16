@@ -1,6 +1,7 @@
+//interactive map marker
 ymaps.ready(function () {
 var myMap = new ymaps.Map("map", {
-        center: [59.939460, 30.31508],
+        center: [59.939630, 30.31628],
         zoom: 16
     }),
     myPlacemark = new ymaps.Placemark([59.938554, 30.32248],
@@ -16,7 +17,7 @@ var myMap = new ymaps.Map("map", {
 myMap.geoObjects.add(myPlacemark);
 });
 
-
+//opening/closing a modal content
 var link = document.querySelector(".contact-block-btn");
 var popup = document.querySelector(".modal-content");
 var close = document.querySelector(".close-btn");
