@@ -210,6 +210,7 @@ h3 {
     min-height: 416px;  
     margin: 0 auto;
     margin-bottom: 45px;
+    background: #e9e5dc;
     background: url("../img/map.jpg") no-repeat;
 }
 .contact-block {
