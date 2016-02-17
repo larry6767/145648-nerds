@@ -176,12 +176,12 @@ h3 {
     padding: 0;
     padding-bottom: 3px;    
 }
-.main-navigation li:last-child a {
+.main-navigation-item:last-child a {
     position: relative;
     padding-left: 40px;
     padding-right: 0;
 }
-.main-navigation li:last-child a::before {
+.main-navigation-item:last-child a::before {
     position: absolute;
     top: 16px;
     left: 13px;
@@ -192,14 +192,14 @@ h3 {
     background: url("../img/sprite.png") no-repeat;
     background-position: -7px -151px;
 }
-.main-navigation li:last-child a:hover::before {
+.main-navigation-item:last-child a:hover::before {
     background: url("../img/sprite.png") no-repeat;
     background-position: -7px -201px;
 }
-.main-navigation li:first-child {
+.main-navigation-item:first-child {
     margin-left: 165px;
 }
-.main-navigation li:last-child {
+.main-navigation-item:last-child {
     margin-left: 40px;
 }
 
