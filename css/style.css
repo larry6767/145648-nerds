@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto Medium'), local('Roboto-Medium'), url('robotomedium.woff2') format('woff2'), url('robotomedium.woff') format('woff'), url('robotomedium.ttf') format('truetype');
+    font-family: "Roboto";
+    src: local("Roboto Medium"), local("Roboto-Medium"), url("robotomedium.woff2") format("woff2"), url("robotomedium.woff") format("woff"), url("robotomedium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto Bold'), local('Roboto-Bold'), url('robotobold.woff2') format('woff2'), url('robotobold.woff') format('woff'), url('robotobold.ttf') format('truetype');
+    font-family: "Roboto";
+    src: local("Roboto Bold"), local("Roboto-Bold"), url("robotobold.woff2") format("woff2"), url("robotobold.woff") format("woff"), url("robotobold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
@@ -44,7 +44,7 @@ h3 {
 }
 
 /*------animation------*/
-@keyframes floating {
+@-webkit-keyframes floating {
     0% {
         opacity: 0;
     }
@@ -60,7 +60,6 @@ h3 {
         opacity: 1;
     }
 }
-
 /*------buttons------*/
 .btn {
     display: inline-block;
@@ -137,6 +136,10 @@ h3 {
 .logo {
     width: 140px;
     padding-top: 25px;
+}
+.logo img {
+    width: 139px;
+    height: 56px;
 }
 .main-navigation {
     width: 740px;
@@ -485,6 +488,10 @@ h3 {
     margin-right: 80px;
     margin-bottom: 80px;
 }
+.services img {
+    width: 240px;
+    height: 124px;
+}
 .services:nth-child(3n) {
     margin-right: 0;
 }
@@ -582,7 +589,8 @@ h3 {
     vertical-align: middle;
     text-align: center;
     margin-right: 110px;
-    font-size: 16px;    
+    font-size: 16px;
+    overflow: hidden;
 }
 .project-link:nth-child(3n) {
     margin-right: 0;
@@ -730,6 +738,10 @@ input[type=number] {
 .filter-checkbox input:checked + .filter-control-indicator {
     background-position: -50px -143px;
 }
+.filter-radio input:disabled,
+.filter-checkbox input:disabled {
+    opacity: 0.5;
+}
 .catalog-filter-panel .btn {
     padding: 10px 45px;
     margin-top: 35px;
@@ -846,6 +858,10 @@ input[type=number] {
 .layout {
     position: relative;
     width: 240px;
+}
+.layout img {
+    width: 240px;
+    height: 240px;
 }
 .buy-layout-bar {
     position: absolute;
